@@ -17,15 +17,16 @@ const lights = [
 ];
 
 const SingleLight = () => {
-  const [isOn, setOn] = useState(true);
-
   const getRandomIndex = () => {
     return Math.floor(Math.random() * lights.length);
   };
 
-  const randomIndex = getRandomIndex();
+  //const randomIndex = getRandomIndex();
 
-  const imageSrc = isOn ? lights[randomIndex] : LightOff;
+  const [isOn, setOn] = useState(true);
+  const [color, setColor] = useState(lights[getRandomIndex()]);
+
+  const imageSrc = isOn ? color : LightOff;
 
   const handleToggle = () => {
     setOn(!isOn);
