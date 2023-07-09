@@ -1,0 +1,10 @@
+.wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.wrapper nav {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
